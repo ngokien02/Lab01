@@ -67,6 +67,12 @@ namespace Lab01
             lbError.Text = "";
             try
             {
+                if (Convert.ToDouble(txtB.Text) == 0)
+                {
+                    lbError.Text = "Không chia được cho 0";
+                    txtKQ.Text = "";
+                    return;
+                }
                 double hsa = Convert.ToDouble(txtA.Text);
                 double hsb = Convert.ToDouble(txtB.Text);
                 double kq = hsa / hsb;
