@@ -16,6 +16,7 @@ namespace Lab01
 
         protected void btnCong_Click(object sender, EventArgs e)
         {
+            lbError.Text = "";
             try
             {
                 double hsa = Convert.ToDouble(txtA.Text);
@@ -31,6 +32,7 @@ namespace Lab01
 
         protected void btnTru_Click(object sender, EventArgs e)
         {
+            lbError.Text = "";
             try
             {
                 double hsa = Convert.ToDouble(txtA.Text);
@@ -46,6 +48,7 @@ namespace Lab01
 
         protected void btnNhan_Click(object sender, EventArgs e)
         {
+            lbError.Text = "";
             try
             {
                 double hsa = Convert.ToDouble(txtA.Text);
@@ -61,6 +64,7 @@ namespace Lab01
 
         protected void btnChia_Click(object sender, EventArgs e)
         {
+            lbError.Text = "";
             try
             {
                 double hsa = Convert.ToDouble(txtA.Text);
