@@ -3,8 +3,8 @@
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<link href="Content/bootstrap.min.css" rel="stylesheet" />
 <head runat="server">
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
     <title>Đăng ký thông tin</title>
     <style type="text/css">
         .auto-style1 {
