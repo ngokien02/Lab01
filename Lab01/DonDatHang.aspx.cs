@@ -42,7 +42,22 @@ namespace Lab01
             {
                 string loaiBanh = ddlLoaiBanh.SelectedItem.Text;
                 int soluong = int.Parse(txtSoLuong.Text);
-                lbxBanhDcDat.Items.Add(string.Format("{0} ({1})", loaiBanh, soluong));
+                bool find = false;
+                foreach (ListItem item in lbxBanhDcDat.Items)
+                {
+                    if (item.Text.StartsWith(loaiBanh)) 
+                    {
+                        string[] arr = item.Text.Split(new char[] { '(', ')' });
+                        soluong += int.Parse(arr[1]);
+                        item.Text = $"{loaiBanh} ({soluong})";
+                        find = true;
+                    }
+                }
+
+                if (!find)
+                {
+                    lbxBanhDcDat.Items.Add(string.Format("{0} ({1})", loaiBanh, soluong));
+                }
             }
             catch (Exception ex)
             {

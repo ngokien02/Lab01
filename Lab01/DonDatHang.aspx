@@ -95,12 +95,12 @@
                         Số lượng:
                         <asp:TextBox ID="txtSoLuong" runat="server" Width="112px"></asp:TextBox>
 &nbsp;cái<br />
-                        <asp:Button ID="btnThem" runat="server" OnClick="btnThem_Click" Text="&gt;" Width="33px" />
+                        <asp:Button ID="btnThem" runat="server" OnClick="btnThem_Click" Text="&gt;" Width="33px" ToolTip="Đặt bánh" />
                     </td>
                     <td class="auto-style9" style="border: thin solid #008000">Danh sách bánh được đặt:<br />
                         <asp:ListBox ID="lbxBanhDcDat" runat="server" Width="312px"></asp:ListBox>
                         <br />
-&nbsp;<asp:ImageButton ID="btnXoa" runat="server" Height="29px" OnClick="btnXoa_Click" Width="35px" ImageUrl="~/Images/delete.gif" />
+&nbsp;<asp:ImageButton ID="btnXoa" runat="server" Height="29px" OnClick="btnXoa_Click" Width="35px" ImageUrl="~/Images/delete.gif" ToolTip="Xóa bánh đã đặt" />
                     </td>
                 </tr>
                 <tr>
