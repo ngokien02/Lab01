@@ -83,6 +83,7 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.rtl.css" />
     <Content Include="Content\bootstrap.rtl.min.css" />
+    <Content Include="DangKyThanhVien.aspx" />
     <Content Include="DangKyThongTin.aspx" />
     <Content Include="Demo.aspx" />
     <Content Include="DonDatHang.aspx" />
@@ -137,6 +138,13 @@
     <Content Include="TinhToan.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DangKyThanhVien.aspx.cs">
+      <DependentUpon>DangKyThanhVien.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DangKyThanhVien.aspx.designer.cs">
+      <DependentUpon>DangKyThanhVien.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DangKyThongTin.aspx.cs">
       <DependentUpon>DangKyThongTin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

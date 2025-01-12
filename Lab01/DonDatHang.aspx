@@ -7,6 +7,9 @@
 <head runat="server">
     <title>Đơn đặt hàng</title>
     <style type="text/css">
+        #btnThem, #btnXoa{
+            margin-top:5px;
+        }
         .auto-style1 {
             text-align: left;
             width: 1168px;
