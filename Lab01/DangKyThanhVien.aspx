@@ -83,10 +83,12 @@
                     <td class="auto-style4" style="border: thin solid #FFFFFF"><strong>Hồ sơ khách hàng</strong></td>
                 </tr>
                 <tr>
-                    <td style="border: thin none #FFFFFF" class="auto-style10">Tên đăng nhập:</td>
+                    <td style="border: thin none #FFFFFF" class="auto-style10">
+                        <label for="txtTenDN">Tên đăng nhập:</label>
+                    </td>
                     <td style="border-style: solid; border-width: thin; border-color: #FFFFFF #000000 #FFFFFF #FFFFFF;" class="auto-style11">
                         <asp:TextBox ID="txtTenDN" runat="server" CssClass="form-control" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtTenDN" Display="Dynamic" ErrorMessage="Vui lòng nhập họ tên" ForeColor="Red" SetFocusOnError="True">!</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvTenDN" runat="server" ControlToValidate="txtTenDN" Display="Dynamic" ErrorMessage="Vui lòng nhập tên đăng nhập" ForeColor="Red" SetFocusOnError="True">!</asp:RequiredFieldValidator>
                     </td>
                     <td rowspan="12" style="border-style: none; border-color: #FFFFFF;">
                         <asp:Label ID="lbKetQua" runat="server" Font-Size="Large"></asp:Label>
@@ -94,28 +96,33 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="border: thin none #FFFFFF" class="auto-style15">Mật khẩu:</td>
+                    <td style="border: thin none #FFFFFF" class="auto-style15">
+                        <label for="txtMK">Mật khẩu:</label>
+                    </td>
                     <td style="border-style: solid; border-width: thin; border-color: #FFFFFF #000000 #FFFFFF #FFFFFF;" class="auto-style16">
                         <asp:TextBox ID="txtMK" runat="server" CssClass="form-control" TextMode="Password" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtMK" Display="Dynamic" ErrorMessage="Mật khẩu không được để trống" ForeColor="Red" SetFocusOnError="True">!</asp:RequiredFieldValidator>
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ControlToValidate="txtMK" Display="Dynamic" ErrorMessage="Mật khẩu phải có ít nhất 1 chữ hoa, 1 số và 1 ký tự đặc biệt" ForeColor="Red" SetFocusOnError="True" ValidationExpression="^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&amp;])[A-Za-z\d@$!%*?&amp;]{6,}$">!</asp:RegularExpressionValidator>
+                        <asp:RequiredFieldValidator ID="rfMK" runat="server" ControlToValidate="txtMK" Display="Dynamic" ErrorMessage="Mật khẩu không được để trống" ForeColor="Red" SetFocusOnError="True">!</asp:RequiredFieldValidator>
+                        <asp:RegularExpressionValidator ID="revMK" runat="server" ControlToValidate="txtMK" Display="Dynamic" ErrorMessage="Mật khẩu phải có ít nhất 1 chữ hoa, 1 số và 1 ký tự đặc biệt" ForeColor="Red" SetFocusOnError="True" ValidationExpression="^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&amp;])[A-Za-z\d@$!%*?&amp;]{6,}$">!</asp:RegularExpressionValidator>
                     </td>
                 </tr>
                 <tr>
-                    <td style="border: thin none #FFFFFF" class="auto-style7">Nhập lại mật khẩu:</td>
+                    <td style="border: thin none #FFFFFF" class="auto-style7">
+                        <label for="txtNLMK">Nhập lại mật khẩu:</label>
+                    </td>
                     <td style="border-style: solid; border-width: thin; border-color: #FFFFFF #000000 #FFFFFF #FFFFFF;" class="auto-style12">
                         <asp:TextBox ID="txtNLMK" runat="server" CssClass="form-control" TextMode="Password" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
-                        <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtMK" ControlToValidate="txtNLMK" Display="Dynamic" ErrorMessage="Mật khẩu nhập lại không trùng khớp" ForeColor="Red" SetFocusOnError="True">!</asp:CompareValidator>
+                        <asp:CompareValidator ID="cvNLMK" runat="server" ControlToCompare="txtMK" ControlToValidate="txtNLMK" Display="Dynamic" ErrorMessage="Mật khẩu nhập lại không trùng khớp" ForeColor="Red" SetFocusOnError="True">!</asp:CompareValidator>
                     </td>
                 </tr>
                 <tr>
                     <td class="auto-style4" style="border-style: solid; border-width: thin; border-color: #FFFFFF #000000 #FFFFFF #FFFFFF;" colspan="2"><strong>Thông tin cá nhân</strong></td>
                 </tr>
                 <tr>
-                    <td style="border: thin none #FFFFFF" class="auto-style7">Họ tên khách hàng:</td>
+                    <td style="border: thin none #FFFFFF" class="auto-style7">
+                        <label for="txtHoTen">Họ tên khách hàng:</label></td>
                     <td style="border-style: solid; border-width: thin; border-color: #FFFFFF #000000 #FFFFFF #FFFFFF;" class="auto-style12">
                         <asp:TextBox ID="txtHoTen" runat="server" CssClass="form-control" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="txtHoTen" Display="Dynamic" ErrorMessage="Vui lòng nhập họ tên" ForeColor="Red" SetFocusOnError="True">!</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvHoTen" runat="server" ControlToValidate="txtHoTen" Display="Dynamic" ErrorMessage="Vui lòng nhập họ tên" ForeColor="Red" SetFocusOnError="True">!</asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
@@ -128,23 +135,24 @@
                         /<asp:DropDownList ID="ddlNam" runat="server">
                         </asp:DropDownList>
                         <br />
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="ddlNgay" Display="Dynamic" ErrorMessage="Vui lòng nhập ngày sinh" ForeColor="Red" SetFocusOnError="True">!</asp:RequiredFieldValidator>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="ddlThang" Display="Dynamic" ErrorMessage="Vui lòng nhập tháng sinh" ForeColor="Red" SetFocusOnError="True">!</asp:RequiredFieldValidator>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ControlToValidate="ddlNam" Display="Dynamic" ErrorMessage="Vui lòng nhập năm sinh" ForeColor="Red" SetFocusOnError="True">!</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvNgay" runat="server" ControlToValidate="ddlNgay" Display="Dynamic" ErrorMessage="Vui lòng nhập ngày sinh" ForeColor="Red" SetFocusOnError="True">!</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvThang" runat="server" ControlToValidate="ddlThang" Display="Dynamic" ErrorMessage="Vui lòng nhập tháng sinh" ForeColor="Red" SetFocusOnError="True">!</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvNam" runat="server" ControlToValidate="ddlNam" Display="Dynamic" ErrorMessage="Vui lòng nhập năm sinh" ForeColor="Red" SetFocusOnError="True">!</asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style8" style="border: thin none #FFFFFF">Email:</td>
+                    <td class="auto-style8" style="border: thin none #FFFFFF">
+                        <label for="txtEmail">Email:</label></td>
                     <td class="auto-style3" style="border-style: solid; border-width: thin; border-color: #FFFFFF #000000 #FFFFFF #FFFFFF;">
                         <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtEmail" Display="Dynamic" ErrorMessage="Email không hợp lệ" ForeColor="Red" SetFocusOnError="True" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">!</asp:RegularExpressionValidator>
+                        <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtEmail" Display="Dynamic" ErrorMessage="Email không hợp lệ" ForeColor="Red" SetFocusOnError="True" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">!</asp:RegularExpressionValidator>
                     </td>
                 </tr>
                 <tr>
                     <td style="border: thin none #FFFFFF" class="auto-style7">Thu nhập:</td>
                     <td style="border-style: solid; border-width: thin; border-color: #FFFFFF #000000 #FFFFFF #FFFFFF;" class="auto-style12">
                         <asp:TextBox ID="txtThuNhap" runat="server" CssClass="form-control" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
-                        <asp:CompareValidator ID="CompareValidator2" runat="server" ControlToValidate="txtThuNhap" Display="Dynamic" ErrorMessage="Thu nhập phải là số" ForeColor="Red" Operator="DataTypeCheck" SetFocusOnError="True" Type="Double">!</asp:CompareValidator>
+                        <asp:CompareValidator ID="cvThuNhap" runat="server" ControlToValidate="txtThuNhap" Display="Dynamic" ErrorMessage="Thu nhập phải là số" ForeColor="Red" Operator="DataTypeCheck" SetFocusOnError="True" Type="Double">!</asp:CompareValidator>
                     </td>
                 </tr>
                 <tr>
@@ -157,15 +165,14 @@
                     <td style="border: thin none #FFFFFF" class="auto-style13">Địa chỉ:</td>
                     <td style="border-style: solid; border-width: thin; border-color: #FFFFFF #000000 #FFFFFF #FFFFFF;" class="auto-style14">
                         <asp:TextBox ID="txtDiaChi" runat="server" CssClass="form-control" TextMode="MultiLine" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ControlToValidate="txtDiaChi" Display="Dynamic" ErrorMessage="Vui lòng nhập địa chỉ" ForeColor="Red" SetFocusOnError="True">!</asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="rfvDiaChi" runat="server" ControlToValidate="txtDiaChi" Display="Dynamic" ErrorMessage="Vui lòng nhập địa chỉ" ForeColor="Red" SetFocusOnError="True">!</asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
                     <td style="border: thin none #FFFFFF" class="auto-style7">Điện thoại:</td>
                     <td style="border-style: solid; border-width: thin; border-color: #FFFFFF #000000 #FFFFFF #FFFFFF;" class="auto-style12">
                         <asp:TextBox ID="txtSDT" runat="server" CssClass="form-control" BorderColor="Black" BorderStyle="Solid" BorderWidth="1px"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator11" runat="server" ControlToValidate="txtEmail" Display="Dynamic" ErrorMessage="Vui lòng nhập số điện thoại" ForeColor="Red" SetFocusOnError="True">!</asp:RequiredFieldValidator>
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="txtSDT" Display="Dynamic" ErrorMessage="Số điện thoại không phù hợp" ForeColor="Red" SetFocusOnError="True" ValidationExpression="^0\d{9}$">!</asp:RegularExpressionValidator>
+                        <asp:RegularExpressionValidator ID="revSDT" runat="server" ControlToValidate="txtSDT" Display="Dynamic" ErrorMessage="Số điện thoại không phù hợp" ForeColor="Red" SetFocusOnError="True" ValidationExpression="^0\d{9}$">!</asp:RegularExpressionValidator>
                     </td>
                 </tr>
                 <tr>
